@@ -69,8 +69,8 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
 
 `Micronaut` · `Spring Boot` · `Docker` · `Docker Compose`
 
-<!-- [Gắn link repo tại đây:](https://github.com/HaHiepThanh/Microservices-EmployeeManagement) -->
-<!-- [Xem repository »](https://github.com/HaHiepThanh/ten-repo) -->
+https://github.com/HaHiepThanh/Microservices-EmployeeManagement
+https://github.com/HaHiepThanh/sa-seminar-microservice
 
 ---
 
