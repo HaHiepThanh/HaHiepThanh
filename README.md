@@ -63,14 +63,17 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
 
 ## Dự án tiêu biểu
 
-### Hệ thống Microservice
+### [Microservices – Employee Management](https://github.com/HaHiepThanh/Microservices-EmployeeManagement)
 
-Ứng dụng backend theo kiến trúc **microservice**, kết hợp **Micronaut** và **Spring Boot** cho các service khác nhau. Toàn bộ hệ thống được đóng gói và điều phối bằng **Docker** và **Docker Compose**, hướng tới khả năng triển khai độc lập và mở rộng linh hoạt.
+Hệ thống quản lý nhân sự xây dựng theo kiến trúc **microservice**, kết hợp **Micronaut** và **Spring Boot** cho các service khác nhau. Toàn bộ hệ thống được đóng gói và điều phối bằng **Docker** và **Docker Compose**, hướng tới khả năng triển khai độc lập và mở rộng linh hoạt.
 
 `Micronaut` · `Spring Boot` · `Docker` · `Docker Compose`
 
-https://github.com/HaHiepThanh/Microservices-EmployeeManagement
-https://github.com/HaHiepThanh/sa-seminar-microservice
+### [SA Seminar – Microservice](https://github.com/HaHiepThanh/sa-seminar-microservice)
+
+Dự án seminar về kiến trúc phần mềm, tập trung phân tích và triển khai mô hình microservice cùng quy trình container hóa.
+
+`Microservice` · `Docker`
 
 ---
 
@@ -78,7 +81,7 @@ https://github.com/HaHiepThanh/sa-seminar-microservice
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=HaHiepThanh&show_icons=true&theme=default&count_private=true&hide_border=true" alt="GitHub Stats" height="165"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=HaHiepThanh&theme=default&hide_border=true" alt="GitHub Streak" height="165"/>
+  <img src="https://streak-stats.demolab.com?user=HaHiepThanh&theme=default&hide_border=true" alt="GitHub Streak" height="165"/>
 </p>
 
 <p align="center">
@@ -90,7 +93,7 @@ https://github.com/HaHiepThanh/sa-seminar-microservice
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=HaHiepThanh&theme=minimal&hide_border=true" alt="Activity Graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=HaHiepThanh&theme=github-compact&hide_border=true" alt="Activity Graph"/>
 </p>
 
 ---
