@@ -80,16 +80,21 @@ Dự án seminar về kiến trúc phần mềm, tập trung phân tích và tri
 ## Thống kê GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=HaHiepThanh&show_icons=true&theme=default&count_private=true&hide_border=true" alt="GitHub Stats" height="165"/>
-  <img src="https://streak-stats.demolab.com?user=HaHiepThanh&theme=default&hide_border=true" alt="GitHub Streak" height="165"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=HaHiepThanh&theme=github" alt="Profile Details"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=HaHiepThanh&layout=compact&theme=default&hide_border=true&langs_count=8" alt="Top Languages"/>
+  <img src="https://streak-stats.demolab.com?user=HaHiepThanh&theme=default&hide_border=true" alt="GitHub Streak" height="180"/>
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=HaHiepThanh&theme=flat&no-frame=true&column=7&margin-w=10" alt="Trophies"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=HaHiepThanh&theme=github" alt="Repos per Language" height="200"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=HaHiepThanh&theme=github" alt="Most Commit Language" height="200"/>
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=HaHiepThanh&theme=github" alt="Stats" height="200"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=HaHiepThanh&theme=github&utcOffset=7" alt="Productive Time" height="200"/>
 </p>
 
 <p align="center">
