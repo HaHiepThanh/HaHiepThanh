@@ -1,13 +1,13 @@
 <!--
-  HƯỚNG DẪN: Đặt file này (tên: README.md) trong repo có tên trùng với
-  username GitHub, tức repo HaHiepThanh/HaHiepThanh, đặt visibility là Public.
-  GitHub sẽ tự hiển thị nội dung này trên trang profile.
+  SETUP: Place this file (named README.md) in a repository whose name matches
+  your GitHub username — i.e. HaHiepThanh/HaHiepThanh — and set it to Public.
+  GitHub will automatically render it on your profile page.
 -->
 
-<h1 align="center">Hà Hiệp Thanh</h1>
+<h1 align="center">Ha Hiep Thanh</h1>
 
 <p align="center">
-  <b>Aspiring DevOps Engineer</b> · Sinh viên năm 3
+  <b>Aspiring DevOps Engineer</b> · Third-year Software Engineering student
 </p>
 
 <p align="center">
@@ -24,17 +24,17 @@
 
 ---
 
-## Giới thiệu
+## About Me
 
-Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **DevOps Engineer**. Tôi có nền tảng phát triển ứng dụng với nhiều framework backend và frontend, đồng thời đang tập trung xây dựng năng lực về hạ tầng, container hóa và điện toán đám mây.
+I'm a third-year student working toward a career as a **DevOps Engineer**. I have hands-on experience building applications across several backend and frontend frameworks, and I'm currently focused on deepening my skills in infrastructure, containerization, and cloud computing.
 
-- Định hướng nghề nghiệp: **DevOps / Platform Engineering**
-- Đang tìm hiểu sâu về: **Kubernetes, Proxmox, Google Cloud Platform**
-- Quan tâm đến: kiến trúc microservice, tự động hóa triển khai (CI/CD), và tối ưu hạ tầng
+- Career direction: **DevOps / Platform Engineering**
+- Currently learning: **Kubernetes, Proxmox, Google Cloud Platform**
+- Interested in: microservice architecture, deployment automation (CI/CD), and infrastructure optimization
 
 ---
 
-## Công nghệ sử dụng
+## Tech Stack
 
 **Frameworks**
 
@@ -73,24 +73,24 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
 
 ---
 
-## Dự án tiêu biểu
+## Featured Projects
 
-### Resona – Nền tảng nghe nhạc trực tuyến
+### Resona — Music Streaming Platform
 
-Ứng dụng streaming nhạc full-stack, tách thành 2 repo: [**resona**](https://github.com/HaHiepThanh/resona) (Angular frontend) và [**resona_core**](https://github.com/HaHiepThanh/resona_core) (NestJS backend).
+A full-stack music streaming application split across two repositories: [**resona**](https://github.com/HaHiepThanh/resona) (Angular frontend) and [**resona_core**](https://github.com/HaHiepThanh/resona_core) (NestJS backend).
 
 **Frontend — Angular 19**
-- Quản lý state tập trung bằng **NgRx** (Store + Effects) cho 11 domain: track, playlist, queue, play, history, favorite, comment, search, category, profile, auth
-- UI dựng trên **Angular Material + CDK**: player bar, hàng chờ phát (queue) kéo-thả, lời bài hát đồng bộ, bình luận, dialog đăng nhập
-- Xác thực người dùng qua **Firebase Authentication** (`@angular/fire`), pipe tùy biến để chuyển đổi ảnh, thời lượng và định dạng lyrics
+- Centralized state management with **NgRx** (Store + Effects) across 11 domains: track, playlist, queue, play, history, favorite, comment, search, category, profile, and auth
+- UI built on **Angular Material + CDK**: player bar, drag-and-drop play queue, synchronized lyrics, comment threads, and auth dialogs
+- User authentication via **Firebase Authentication** (`@angular/fire`), plus custom pipes for image resolution, duration formatting, and lyrics parsing
 
 **Backend — NestJS 11 (TypeScript)**
-- Kiến trúc **domain-driven**: 11 module độc lập (track, playlist, playlist_tracks, category, comment, queue, history, notification, profile, auth, supabase), mỗi module đủ controller / service / entity / DTO
-- **Upload file theo chunk**: client cắt file nhạc thành nhiều phần, server nhận từng chunk rồi ghép lại bằng Node.js stream — cho phép tải lên file lớn mà không nghẽn bộ nhớ
-- **Xử lý audio bằng FFmpeg**: tự động chuyển mã sang AAC/M4A, remux ADTS → ASC, đặt cờ `+faststart` để trình duyệt đọc được metadata ngay khi bắt đầu tải; đọc thời lượng chính xác qua `ffprobe` và bóc metadata bằng `music-metadata`
-- **Supabase** làm nơi lưu trữ file (Storage) và cơ sở dữ liệu **PostgreSQL**, truy cập qua **TypeORM** với quan hệ đầy đủ (ManyToOne / OneToMany / ManyToMany, cascade delete)
-- Bảo mật bằng **Firebase Admin SDK** middleware xác thực ID token, validation bằng `class-validator` + `ValidationPipe` toàn cục
-- Đóng gói **Docker** (image `node:20-bullseye` có cài sẵn FFmpeg)
+- **Domain-driven architecture**: 11 self-contained modules (track, playlist, playlist_tracks, category, comment, queue, history, notification, profile, auth, supabase), each with its own controller, service, entity, and DTOs
+- **Chunked file upload**: the client splits audio files into parts and the server reassembles them using Node.js streams, allowing large uploads without exhausting memory
+- **FFmpeg audio pipeline**: automatic transcoding to AAC/M4A, ADTS → ASC remuxing, and the `+faststart` flag so browsers can read metadata as soon as playback begins; accurate duration probing via `ffprobe` and tag extraction with `music-metadata`
+- **Supabase** for object storage and the **PostgreSQL** database, accessed through **TypeORM** with fully modeled relations (ManyToOne / OneToMany / ManyToMany, cascade delete)
+- Secured by a **Firebase Admin SDK** middleware that verifies ID tokens, with request validation through `class-validator` and a global `ValidationPipe`
+- Containerized with **Docker** (`node:20-bullseye` image with FFmpeg preinstalled)
 
 <p>
   <img src="https://img.shields.io/badge/Angular_19-DD0031?style=flat-square&logo=angular&logoColor=white"/>
@@ -109,15 +109,15 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
 </p>
 
-### [Microservices – Employee Management](https://github.com/HaHiepThanh/Microservices-EmployeeManagement)
+### [Microservices — Employee Management](https://github.com/HaHiepThanh/Microservices-EmployeeManagement)
 
-Hệ thống quản lý nhân sự theo kiến trúc **microservice** với 5 service độc lập (auth, employee, department, attendance, payroll), áp dụng mô hình **database-per-service** — mỗi service sở hữu một instance MySQL riêng.
+An HR management system built on a **microservice architecture** with five independent services (auth, employee, department, attendance, payroll), following the **database-per-service** pattern — each service owns its own MySQL instance.
 
-- **Giao tiếp đồng bộ:** REST (`RestClient`) cho luồng employee → department, và **gRPC / Protocol Buffers** cho các lời gọi hiệu năng cao employee → payroll & attendance
-- **Giao tiếp bất đồng bộ:** **RabbitMQ (Spring AMQP)** cho kiến trúc event-driven — auth và employee publish event, consumer xử lý độc lập
-- **Bảo mật:** Spring Security stateless với **JWT**, OAuth2 Resource Server, phân quyền **RBAC** (ADMIN / HR / EMPLOYEE)
-- **Triển khai:** Docker multi-stage build, Docker Compose với `healthcheck` + `depends_on: service_healthy`, image publish lên Docker Hub
-- **Design patterns:** Adapter (chống coupling với external DTO), Builder, Singleton — có tài liệu chỉ rõ vị trí áp dụng
+- **Synchronous communication:** REST (`RestClient`) for the employee → department flow, and **gRPC / Protocol Buffers** for high-performance calls from employee → payroll and attendance
+- **Asynchronous communication:** **RabbitMQ (Spring AMQP)** powering an event-driven design — auth and employee publish events that consumers process independently
+- **Security:** stateless Spring Security with **JWT**, OAuth2 Resource Server, and **RBAC** across three roles (ADMIN / HR / EMPLOYEE)
+- **Deployment:** multi-stage Docker builds, Docker Compose with `healthcheck` and `depends_on: service_healthy` orchestration, images published to Docker Hub
+- **Design patterns:** Adapter (isolating external DTO coupling), Builder, and Singleton — each documented with its exact location in the codebase
 
 <p>
   <img src="https://img.shields.io/badge/Java_21-007396?style=flat-square&logo=openjdk&logoColor=white"/>
@@ -137,16 +137,16 @@ Hệ thống quản lý nhân sự theo kiến trúc **microservice** với 5 se
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white"/>
 </p>
 
-### [SA Seminar – E-Commerce Microservice](https://github.com/HaHiepThanh/sa-seminar-microservice)
+### [SA Seminar — E-Commerce Microservices](https://github.com/HaHiepThanh/sa-seminar-microservice)
 
-Nền tảng thương mại điện tử microservice xây dựng trên **Micronaut**, gồm 6 service: catalog, inventory, user, cart, order-payment và mail. Trọng tâm là tính năng **group-buy (mua chung) real-time**.
+A microservice-based e-commerce platform built on **Micronaut**, comprising six services: catalog, inventory, user, cart, order-payment, and mail. Its centerpiece is a **real-time group-buy** feature.
 
-- **Real-time:** **WebSocket** và **Server-Sent Events (SSE)** đẩy trạng thái group-buy về client; Nginx được cấu hình riêng (`proxy_buffering off`, HTTP/1.1) để stream không bị buffer
-- **API Gateway:** **Nginx** reverse proxy định tuyến toàn bộ traffic theo path tới từng service, đồng thời serve static frontend
-- **Giao tiếp giữa service:** **gRPC** (catalog/order ↔ inventory) kết hợp **RabbitMQ** cho event bất đồng bộ (đặt hàng → trừ tồn kho → gửi mail xác nhận)
-- **Data layer:** Micronaut Data (Hibernate JPA & JDBC), **Flyway migration**, HikariCP connection pool, MySQL 8
-- **Bảo mật:** Micronaut Security **JWT** + băm mật khẩu **BCrypt**
-- **Khác:** lập trình phản ứng với **Project Reactor**, tài liệu API tự sinh bằng **OpenAPI / Swagger**, mail service dùng Jakarta Mail, test với **JUnit 5**
+- **Real-time delivery:** **WebSocket** and **Server-Sent Events (SSE)** push live group-buy state to clients, with Nginx specifically tuned (`proxy_buffering off`, HTTP/1.1) so streams aren't buffered
+- **API Gateway:** **Nginx** acts as a reverse proxy, routing all traffic to the right service by path while also serving the static frontend
+- **Inter-service communication:** **gRPC** (catalog/order ↔ inventory) combined with **RabbitMQ** for asynchronous events (order placed → stock deducted → confirmation email sent)
+- **Data layer:** Micronaut Data (Hibernate JPA & JDBC), **Flyway migrations**, HikariCP connection pooling, MySQL 8
+- **Security:** Micronaut Security **JWT** with **BCrypt** password hashing
+- **Also featuring:** reactive programming with **Project Reactor**, auto-generated API docs via **OpenAPI / Swagger**, a mail service built on Jakarta Mail, and tests written with **JUnit 5**
 
 <p>
   <img src="https://img.shields.io/badge/Micronaut-000000?style=flat-square&logo=micronaut&logoColor=white"/>
@@ -170,7 +170,7 @@ Nền tảng thương mại điện tử microservice xây dựng trên **Micron
 
 ---
 
-## Thống kê GitHub
+## GitHub Stats
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=HaHiepThanh&theme=github" alt="Profile Details"/>
