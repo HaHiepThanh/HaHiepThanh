@@ -53,9 +53,11 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
 
 **Databases**
 
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
 **DevOps & Tools**
 
@@ -64,11 +66,48 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
 ![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![NGINX](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 ---
 
 ## Dự án tiêu biểu
+
+### Resona – Nền tảng nghe nhạc trực tuyến
+
+Ứng dụng streaming nhạc full-stack, tách thành 2 repo: [**resona**](https://github.com/HaHiepThanh/resona) (Angular frontend) và [**resona_core**](https://github.com/HaHiepThanh/resona_core) (NestJS backend).
+
+**Frontend — Angular 19**
+- Quản lý state tập trung bằng **NgRx** (Store + Effects) cho 11 domain: track, playlist, queue, play, history, favorite, comment, search, category, profile, auth
+- UI dựng trên **Angular Material + CDK**: player bar, hàng chờ phát (queue) kéo-thả, lời bài hát đồng bộ, bình luận, dialog đăng nhập
+- Xác thực người dùng qua **Firebase Authentication** (`@angular/fire`), pipe tùy biến để chuyển đổi ảnh, thời lượng và định dạng lyrics
+
+**Backend — NestJS 11 (TypeScript)**
+- Kiến trúc **domain-driven**: 11 module độc lập (track, playlist, playlist_tracks, category, comment, queue, history, notification, profile, auth, supabase), mỗi module đủ controller / service / entity / DTO
+- **Upload file theo chunk**: client cắt file nhạc thành nhiều phần, server nhận từng chunk rồi ghép lại bằng Node.js stream — cho phép tải lên file lớn mà không nghẽn bộ nhớ
+- **Xử lý audio bằng FFmpeg**: tự động chuyển mã sang AAC/M4A, remux ADTS → ASC, đặt cờ `+faststart` để trình duyệt đọc được metadata ngay khi bắt đầu tải; đọc thời lượng chính xác qua `ffprobe` và bóc metadata bằng `music-metadata`
+- **Supabase** làm nơi lưu trữ file (Storage) và cơ sở dữ liệu **PostgreSQL**, truy cập qua **TypeORM** với quan hệ đầy đủ (ManyToOne / OneToMany / ManyToMany, cascade delete)
+- Bảo mật bằng **Firebase Admin SDK** middleware xác thực ID token, validation bằng `class-validator` + `ValidationPipe` toàn cục
+- Đóng gói **Docker** (image `node:20-bullseye` có cài sẵn FFmpeg)
+
+<p>
+  <img src="https://img.shields.io/badge/Angular_19-DD0031?style=flat-square&logo=angular&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NgRx-BA2BD2?style=flat-square&logo=reduxsaga&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Angular_Material-757575?style=flat-square&logo=materialdesign&logoColor=white"/>
+  <img src="https://img.shields.io/badge/RxJS-B7178C?style=flat-square&logo=reactivex&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeORM-FE0803?style=flat-square&logo=typeorm&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Firebase_Auth-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+  <img src="https://img.shields.io/badge/FFmpeg-007808?style=flat-square&logo=ffmpeg&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+</p>
 
 ### [Microservices – Employee Management](https://github.com/HaHiepThanh/Microservices-EmployeeManagement)
 
