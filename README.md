@@ -44,6 +44,13 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
 ![Gin](https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
+**Communication & Messaging**
+
+![gRPC](https://img.shields.io/badge/gRPC-244C5A?style=for-the-badge&logo=grpc&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![REST API](https://img.shields.io/badge/REST_API-02569B?style=for-the-badge&logo=fastapi&logoColor=white)
+![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
+
 **Databases**
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -65,15 +72,62 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
 
 ### [Microservices – Employee Management](https://github.com/HaHiepThanh/Microservices-EmployeeManagement)
 
-Hệ thống quản lý nhân sự xây dựng theo kiến trúc **microservice**, kết hợp **Micronaut** và **Spring Boot** cho các service khác nhau. Toàn bộ hệ thống được đóng gói và điều phối bằng **Docker** và **Docker Compose**, hướng tới khả năng triển khai độc lập và mở rộng linh hoạt.
+Hệ thống quản lý nhân sự theo kiến trúc **microservice** với 5 service độc lập (auth, employee, department, attendance, payroll), áp dụng mô hình **database-per-service** — mỗi service sở hữu một instance MySQL riêng.
 
-`Micronaut` · `Spring Boot` · `Docker` · `Docker Compose`
+- **Giao tiếp đồng bộ:** REST (`RestClient`) cho luồng employee → department, và **gRPC / Protocol Buffers** cho các lời gọi hiệu năng cao employee → payroll & attendance
+- **Giao tiếp bất đồng bộ:** **RabbitMQ (Spring AMQP)** cho kiến trúc event-driven — auth và employee publish event, consumer xử lý độc lập
+- **Bảo mật:** Spring Security stateless với **JWT**, OAuth2 Resource Server, phân quyền **RBAC** (ADMIN / HR / EMPLOYEE)
+- **Triển khai:** Docker multi-stage build, Docker Compose với `healthcheck` + `depends_on: service_healthy`, image publish lên Docker Hub
+- **Design patterns:** Adapter (chống coupling với external DTO), Builder, Singleton — có tài liệu chỉ rõ vị trí áp dụng
 
-### [SA Seminar – Microservice](https://github.com/HaHiepThanh/sa-seminar-microservice)
+<p>
+  <img src="https://img.shields.io/badge/Java_21-007396?style=flat-square&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white"/>
+  <img src="https://img.shields.io/badge/gRPC-244C5A?style=flat-square&logo=grpc&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Protobuf-EA4335?style=flat-square&logo=googledocs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Hibernate_JPA-59666C?style=flat-square&logo=hibernate&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL_8-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MapStruct-E10098?style=flat-square&logo=databricks&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Lombok-BC4521?style=flat-square&logo=lombok&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white"/>
+</p>
 
-Dự án seminar về kiến trúc phần mềm, tập trung phân tích và triển khai mô hình microservice cùng quy trình container hóa.
+### [SA Seminar – E-Commerce Microservice](https://github.com/HaHiepThanh/sa-seminar-microservice)
 
-`Microservice` · `Docker`
+Nền tảng thương mại điện tử microservice xây dựng trên **Micronaut**, gồm 6 service: catalog, inventory, user, cart, order-payment và mail. Trọng tâm là tính năng **group-buy (mua chung) real-time**.
+
+- **Real-time:** **WebSocket** và **Server-Sent Events (SSE)** đẩy trạng thái group-buy về client; Nginx được cấu hình riêng (`proxy_buffering off`, HTTP/1.1) để stream không bị buffer
+- **API Gateway:** **Nginx** reverse proxy định tuyến toàn bộ traffic theo path tới từng service, đồng thời serve static frontend
+- **Giao tiếp giữa service:** **gRPC** (catalog/order ↔ inventory) kết hợp **RabbitMQ** cho event bất đồng bộ (đặt hàng → trừ tồn kho → gửi mail xác nhận)
+- **Data layer:** Micronaut Data (Hibernate JPA & JDBC), **Flyway migration**, HikariCP connection pool, MySQL 8
+- **Bảo mật:** Micronaut Security **JWT** + băm mật khẩu **BCrypt**
+- **Khác:** lập trình phản ứng với **Project Reactor**, tài liệu API tự sinh bằng **OpenAPI / Swagger**, mail service dùng Jakarta Mail, test với **JUnit 5**
+
+<p>
+  <img src="https://img.shields.io/badge/Micronaut-000000?style=flat-square&logo=micronaut&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Netty-005571?style=flat-square&logo=apachetomcat&logoColor=white"/>
+  <img src="https://img.shields.io/badge/gRPC-244C5A?style=flat-square&logo=grpc&logoColor=white"/>
+  <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white"/>
+  <img src="https://img.shields.io/badge/WebSocket-010101?style=flat-square&logo=socketdotio&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SSE-FFB13B?style=flat-square&logo=serverfault&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=nginx&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Project_Reactor-6DB33F?style=flat-square&logo=reactivex&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=flyway&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL_8-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OpenAPI-6BA539?style=flat-square&logo=openapiinitiative&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JUnit_5-25A162?style=flat-square&logo=junit5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+</p>
 
 ---
 
