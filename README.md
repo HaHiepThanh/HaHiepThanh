@@ -20,7 +20,6 @@
   <a href="mailto:hahiepthanhhhtt@gmail.com">
     <img src="https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"/>
   </a>
-  <img src="https://img.shields.io/badge/Phone-0797112131-25D366?style=flat&logo=whatsapp&logoColor=white" alt="Phone"/>
 </p>
 
 ---
@@ -70,7 +69,7 @@ Tôi là sinh viên năm 3, đang theo đuổi định hướng trở thành **D
 
 `Micronaut` · `Spring Boot` · `Docker` · `Docker Compose`
 
-<!-- Gắn link repo tại đây: -->
+<!-- [Gắn link repo tại đây:](https://github.com/HaHiepThanh/Microservices-EmployeeManagement) -->
 <!-- [Xem repository »](https://github.com/HaHiepThanh/ten-repo) -->
 
 ---
