@@ -7,7 +7,7 @@
 <h1 align="center">Ha Hiep Thanh</h1>
 
 <p align="center">
-  <b>Aspiring DevOps Engineer</b> · Forth-year Software Engineering student
+  <b>Aspiring DevOps Engineer</b> · Fourth-year Software Engineering student
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 
 ## About Me
 
-I'm a forth-year student working toward a career as a **DevOps Engineer**. I have hands-on experience building applications across several backend and frontend frameworks, and I'm currently focused on deepening my skills in infrastructure, containerization, and cloud computing.
+I'm a fourth-year student working toward a career as a **DevOps Engineer**. I have hands-on experience building applications across several backend and frontend frameworks, and I'm currently focused on deepening my skills in infrastructure, containerization, and cloud computing.
 
 - Career direction: **DevOps / Platform Engineering**
 - Currently learning: **Kubernetes, Proxmox, Google Cloud Platform**
