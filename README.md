@@ -29,7 +29,6 @@
 I'm a fourth-year student working toward a career as a **DevOps Engineer**. I have hands-on experience building applications across several backend and frontend frameworks, and I'm currently focused on deepening my skills in infrastructure, containerization, and cloud computing.
 
 - Career direction: **DevOps / Platform Engineering**
-- Currently learning: **Kubernetes, Proxmox, Google Cloud Platform**
 - Interested in: microservice architecture, deployment automation (CI/CD), and infrastructure optimization
 
 ---
@@ -63,10 +62,8 @@ I'm a fourth-year student working toward a career as a **DevOps Engineer**. I ha
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![NGINX](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
@@ -183,15 +180,6 @@ A microservice-based e-commerce platform built on **Micronaut**, comprising six 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=HaHiepThanh&theme=github" alt="Repos per Language" height="200"/>
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=HaHiepThanh&theme=github" alt="Most Commit Language" height="200"/>
-</p>
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=HaHiepThanh&theme=github" alt="Stats" height="200"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=HaHiepThanh&theme=github&utcOffset=7" alt="Productive Time" height="200"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=HaHiepThanh&theme=github-compact&hide_border=true" alt="Activity Graph"/>
 </p>
 
 ---
