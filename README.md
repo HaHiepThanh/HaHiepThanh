@@ -164,26 +164,3 @@ A microservice-based e-commerce platform built on **Micronaut**, comprising six 
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white"/>
 </p>
-
----
-
-## GitHub Stats
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=HaHiepThanh&theme=github" alt="Profile Details"/>
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=HaHiepThanh&theme=default&hide_border=true" alt="GitHub Streak" height="180"/>
-</p>
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=HaHiepThanh&theme=github" alt="Repos per Language" height="200"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=HaHiepThanh&theme=github" alt="Most Commit Language" height="200"/>
-</p>
-
----
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=HaHiepThanh&style=flat&color=blue" alt="Profile views"/>
-</p>
